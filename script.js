@@ -58,3 +58,57 @@ document.head.insertAdjacentHTML('beforeend', `
     }
 </style>
 `);
+
+// Funcionalidad Espacio Colaborativo (Modales)
+const colabBtns = document.querySelectorAll('.colab-btn');
+const modal = document.getElementById('colab-modal');
+const closeModal = document.querySelector('.close-modal');
+const modalTitle = document.getElementById('modal-title');
+const modalBody = document.getElementById('modal-body');
+
+const colabContent = {
+    muro: {
+        title: "Muro de ideas",
+        body: "<p>Un espacio interactivo donde los estudiantes pueden compartir lluvias de ideas, debates y reflexiones sobre la acción colectiva. <br><br><em>(Próximamente: Integración con padlets o pizarras interactivas de la asignatura)</em></p>"
+    },
+    bitacora: {
+        title: "Bitácora colectiva",
+        body: "<p>Registro colaborativo de las sesiones, aprendizajes y experiencias clave que compartimos durante el desarrollo de la asignatura. Un diario abierto a múltiples voces.</p>"
+    },
+    podcast: {
+        title: "Podcast de la asignatura",
+        body: "<p>Episodios y cápsulas de audio creadas, grabadas y editadas colaborativamente para debatir los textos y reflexionar sobre la economía social.</p>"
+    },
+    proyectos: {
+        title: "Banco de proyectos",
+        body: "<p>Repositorio de iniciativas de innovación y proyectos comunitarios diseñados por los estudiantes como resultado de la materia.</p>"
+    },
+    galeria: {
+        title: "Galería de experiencias",
+        body: "<p>Exposición virtual de fotografías, audios, evidencias de campo, carteles y testimonios del trabajo directo con colectivos, territorios y acción social construida desde el aula.</p>"
+    }
+};
+
+if (colabBtns && modal) {
+    colabBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const type = btn.getAttribute('data-modal');
+            if (colabContent[type]) {
+                modalTitle.textContent = colabContent[type].title;
+                modalBody.innerHTML = colabContent[type].body;
+                modal.style.display = "flex";
+            }
+        });
+    });
+
+    closeModal.addEventListener('click', () => {
+        modal.style.display = "none";
+    });
+
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+}
