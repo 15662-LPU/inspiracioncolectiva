@@ -1576,23 +1576,55 @@ details.accordion .content {
     gap: 1rem;
 }
 
+.media-archive-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .media-card {
     align-items: stretch;
     display: grid;
     gap: 1.2rem;
-    grid-template-columns: 220px minmax(0, 1fr);
+    grid-template-columns: 160px minmax(0, 1fr);
+}
+
+.media-card h3 {
+    font-size: 1.1rem;
+    letter-spacing: 0;
+    line-height: 1.25;
+}
+
+.media-card p:not(.card-label) {
+    color: var(--muted);
+    margin-bottom: 1rem;
 }
 
 .media-thumb {
     align-items: center;
-    background: var(--surface-soft);
+    background:
+        linear-gradient(135deg, rgba(8, 76, 97, 0.09), rgba(12, 127, 92, 0.12)),
+        var(--surface-soft);
     border: 1px dashed var(--line);
     border-radius: var(--radius);
-    color: var(--muted);
+    color: var(--blue);
     display: flex;
     font-weight: 900;
     justify-content: center;
-    min-height: 170px;
+    min-height: 150px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.media-pending-note {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    margin-top: 1rem;
+    padding: 1.2rem;
+}
+
+.media-pending-note h3,
+.media-pending-note p {
+    margin-top: 0;
 }
 
 .btn.is-disabled,
@@ -1686,7 +1718,7 @@ details.accordion .content {
     .network-participation,
     .network-next-steps,
     .communication-layout,
-    .media-card {
+    .media-archive-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
@@ -1779,6 +1811,7 @@ details.accordion .content {
     .network-participation,
     .network-next-steps,
     .communication-layout,
+    .media-archive-grid,
     .media-metrics,
     .media-card {
         grid-template-columns: 1fr;
