@@ -1237,6 +1237,146 @@ details.accordion .content {
     margin-top: 1.5rem;
 }
 
+.network-hero {
+    background:
+        linear-gradient(135deg, rgba(4, 21, 48, 0.97), rgba(6, 58, 73, 0.91)),
+        radial-gradient(circle at 20% 22%, rgba(15, 138, 100, 0.24), transparent 32%),
+        radial-gradient(circle at 78% 16%, rgba(29, 78, 216, 0.2), transparent 30%);
+}
+
+.network-panel {
+    position: relative;
+}
+
+.network-mini-map {
+    display: grid;
+    gap: 0.7rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 1.4rem;
+}
+
+.network-mini-map span,
+.network-ladder span {
+    background: var(--surface-soft);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    color: var(--ink);
+    font-size: 0.88rem;
+    font-weight: 800;
+    padding: 0.75rem;
+    text-align: center;
+}
+
+.network-ladder {
+    display: grid;
+    gap: 0.85rem;
+    margin-bottom: 1.5rem;
+}
+
+.network-ladder span {
+    position: relative;
+}
+
+.network-ladder span:not(:last-child)::after {
+    background: var(--green);
+    bottom: -0.72rem;
+    content: "";
+    height: 0.58rem;
+    left: 50%;
+    opacity: 0.45;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 2px;
+}
+
+.network-statement {
+    color: var(--ink) !important;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.network-ecosystem {
+    align-items: stretch;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.network-ecosystem article {
+    background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(245, 247, 251, 0.96));
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: 0 14px 40px rgba(11, 18, 32, 0.06);
+    display: grid;
+    gap: 0.55rem;
+    grid-column: span 4;
+    padding: 1.4rem;
+    position: relative;
+}
+
+.network-ecosystem article:nth-child(1),
+.network-ecosystem article:nth-child(7) {
+    grid-column: span 6;
+}
+
+.network-ecosystem span,
+.network-participation span {
+    align-items: center;
+    background: rgba(15, 138, 100, 0.12);
+    border: 1px solid rgba(15, 138, 100, 0.25);
+    border-radius: 999px;
+    color: var(--green);
+    display: inline-flex;
+    font-size: 0.76rem;
+    font-weight: 900;
+    height: 32px;
+    justify-content: center;
+    width: 32px;
+}
+
+.network-ecosystem strong,
+.network-participation strong {
+    color: var(--ink);
+    font-size: 1.05rem;
+}
+
+.network-ecosystem p,
+.network-participation p {
+    color: var(--muted);
+    margin: 0;
+}
+
+.network-participation,
+.network-next-steps {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.network-participation article {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: 0 12px 32px rgba(11, 18, 32, 0.05);
+    display: grid;
+    gap: 0.6rem;
+    padding: 1.25rem;
+    position: relative;
+}
+
+.network-participation article:not(:last-child)::after {
+    color: var(--blue);
+    content: "→";
+    font-size: 1.4rem;
+    font-weight: 900;
+    position: absolute;
+    right: -0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
@@ -1317,6 +1457,22 @@ details.accordion .content {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
+    .network-ecosystem,
+    .network-participation,
+    .network-next-steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .network-ecosystem article,
+    .network-ecosystem article:nth-child(1),
+    .network-ecosystem article:nth-child(7) {
+        grid-column: auto;
+    }
+
+    .network-participation article:not(:last-child)::after {
+        content: "";
+    }
+
     .project-card-wide {
         grid-column: auto;
     }
@@ -1388,6 +1544,13 @@ details.accordion .content {
     }
 
     .micro-route {
+        grid-template-columns: 1fr;
+    }
+
+    .network-mini-map,
+    .network-ecosystem,
+    .network-participation,
+    .network-next-steps {
         grid-template-columns: 1fr;
     }
 
