@@ -152,11 +152,109 @@ const hydrateCvSummary = () => {
     }
 };
 
+const setupActivityCarousel = () => {
+    const carousel = qs("[data-carousel]");
+    if (!carousel) return;
+
+    const track = qs(".carousel-track", carousel);
+    const slides = qsa(".carousel-slide", carousel);
+    const prevButton = qs("[data-carousel-prev]", carousel);
+    const nextButton = qs("[data-carousel-next]", carousel);
+    const dotsTarget = qs("[data-carousel-dots]", carousel);
+    const emptyState = qs(".carousel-empty", carousel);
+
+    if (!track || !slides.length) {
+        prevButton?.setAttribute("disabled", "true");
+        nextButton?.setAttribute("disabled", "true");
+        return;
+    }
+
+    emptyState?.setAttribute("hidden", "true");
+
+    let currentIndex = 0;
+    let autoplayId = null;
+    let touchStartX = 0;
+    const autoplayDelay = 6500;
+
+    const stopAutoplay = () => {
+        if (autoplayId) window.clearInterval(autoplayId);
+        autoplayId = null;
+    };
+
+    const goToSlide = (index) => {
+        currentIndex = (index + slides.length) % slides.length;
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+        slides.forEach((slide, slideIndex) => {
+            slide.toggleAttribute("aria-hidden", slideIndex !== currentIndex);
+        });
+
+        qsa("button", dotsTarget).forEach((dot, dotIndex) => {
+            dot.setAttribute("aria-current", String(dotIndex === currentIndex));
+        });
+    };
+
+    const startAutoplay = () => {
+        if (slides.length < 2) return;
+        stopAutoplay();
+        autoplayId = window.setInterval(() => goToSlide(currentIndex + 1), autoplayDelay);
+    };
+
+    slides.forEach((slide, index) => {
+        slide.setAttribute("role", "group");
+        slide.setAttribute("aria-roledescription", "diapositiva");
+        slide.setAttribute("aria-label", `${index + 1} de ${slides.length}`);
+    });
+
+    if (dotsTarget) {
+        dotsTarget.innerHTML = slides
+            .map((_, index) => `<button type="button" aria-label="Ir a imagen ${index + 1}"></button>`)
+            .join("");
+
+        qsa("button", dotsTarget).forEach((dot, index) => {
+            dot.addEventListener("click", () => {
+                stopAutoplay();
+                goToSlide(index);
+            });
+        });
+    }
+
+    prevButton?.removeAttribute("disabled");
+    nextButton?.removeAttribute("disabled");
+
+    prevButton?.addEventListener("click", () => {
+        stopAutoplay();
+        goToSlide(currentIndex - 1);
+    });
+
+    nextButton?.addEventListener("click", () => {
+        stopAutoplay();
+        goToSlide(currentIndex + 1);
+    });
+
+    carousel.addEventListener("mouseenter", stopAutoplay);
+    carousel.addEventListener("focusin", stopAutoplay);
+    carousel.addEventListener("touchstart", (event) => {
+        touchStartX = event.touches[0]?.clientX || 0;
+        stopAutoplay();
+    }, { passive: true });
+
+    carousel.addEventListener("touchend", (event) => {
+        const touchEndX = event.changedTouches[0]?.clientX || 0;
+        const delta = touchEndX - touchStartX;
+        if (Math.abs(delta) > 45) goToSlide(currentIndex + (delta < 0 ? 1 : -1));
+    });
+
+    goToSlide(0);
+    startAutoplay();
+};
+
 const init = () => {
     setupNavigation();
     setupReveal();
     animateKpis();
     hydrateCvSummary();
+    setupActivityCarousel();
 };
 
 document.addEventListener("DOMContentLoaded", init);

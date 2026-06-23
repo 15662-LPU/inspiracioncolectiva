@@ -1377,6 +1377,231 @@ details.accordion .content {
     z-index: 2;
 }
 
+.challenge-strip,
+.media-placeholder-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    margin-top: 1.2rem;
+}
+
+.challenge-strip span,
+.media-placeholder-grid span {
+    background: var(--surface-soft);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--ink);
+    font-size: 0.82rem;
+    font-weight: 800;
+    padding: 0.45rem 0.75rem;
+}
+
+.activity-carousel {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.carousel-empty {
+    padding: 2rem;
+}
+
+.carousel-empty h3,
+.communication-feature h3,
+.spotify-panel h3,
+.media-card h3 {
+    color: var(--ink);
+    margin-top: 0;
+}
+
+.carousel-viewport {
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 420ms ease;
+    width: 100%;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+    min-width: 100%;
+    position: relative;
+}
+
+.carousel-slide img {
+    aspect-ratio: 16 / 9;
+    display: block;
+    height: clamp(320px, 52vw, 620px);
+    object-fit: cover;
+    width: 100%;
+}
+
+.carousel-caption {
+    background: rgba(11, 18, 32, 0.86);
+    bottom: 1rem;
+    color: #fff;
+    left: 1rem;
+    max-width: min(520px, calc(100% - 2rem));
+    padding: 1rem;
+    position: absolute;
+}
+
+.carousel-caption h3,
+.carousel-caption p {
+    color: #fff;
+    margin: 0;
+}
+
+.carousel-caption small {
+    color: #dbeafe;
+    display: block;
+    font-weight: 800;
+    margin-top: 0.5rem;
+}
+
+.carousel-controls {
+    align-items: center;
+    border-top: 1px solid var(--line);
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    padding: 0.9rem 1rem;
+}
+
+.carousel-btn {
+    align-items: center;
+    background: var(--ink);
+    border: 0;
+    border-radius: var(--radius);
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 1.35rem;
+    font-weight: 900;
+    height: 42px;
+    justify-content: center;
+    width: 42px;
+}
+
+.carousel-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.35;
+}
+
+.carousel-dots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    justify-content: center;
+}
+
+.carousel-dots button {
+    background: #cbd6e5;
+    border: 0;
+    border-radius: 999px;
+    height: 9px;
+    padding: 0;
+    width: 28px;
+}
+
+.carousel-dots button[aria-current="true"] {
+    background: var(--blue);
+}
+
+.communication-layout {
+    display: grid;
+    gap: 1.2rem;
+    grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.75fr);
+}
+
+.communication-feature,
+.spotify-panel,
+.media-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: 0 12px 32px rgba(11, 18, 32, 0.05);
+    padding: 1.5rem;
+}
+
+.spotify-panel {
+    background:
+        linear-gradient(145deg, rgba(11, 18, 32, 0.97), rgba(6, 58, 73, 0.92));
+    color: #fff;
+}
+
+.spotify-panel h3,
+.spotify-panel p,
+.spotify-panel .card-label {
+    color: #fff;
+}
+
+.spotify-panel .media-placeholder-grid span {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.media-metrics {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin-bottom: 1.2rem;
+}
+
+.media-metrics article {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 1.2rem;
+}
+
+.media-metrics strong {
+    color: var(--ink);
+    display: block;
+    font-size: 1.1rem;
+}
+
+.media-metrics span {
+    color: var(--muted);
+    font-weight: 800;
+}
+
+.media-card-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.media-card {
+    align-items: stretch;
+    display: grid;
+    gap: 1.2rem;
+    grid-template-columns: 220px minmax(0, 1fr);
+}
+
+.media-thumb {
+    align-items: center;
+    background: var(--surface-soft);
+    border: 1px dashed var(--line);
+    border-radius: var(--radius);
+    color: var(--muted);
+    display: flex;
+    font-weight: 900;
+    justify-content: center;
+    min-height: 170px;
+}
+
+.btn.is-disabled,
+.btn[aria-disabled="true"] {
+    cursor: not-allowed;
+    opacity: 0.58;
+    pointer-events: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
@@ -1459,7 +1684,9 @@ details.accordion .content {
 
     .network-ecosystem,
     .network-participation,
-    .network-next-steps {
+    .network-next-steps,
+    .communication-layout,
+    .media-card {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
@@ -1550,8 +1777,21 @@ details.accordion .content {
     .network-mini-map,
     .network-ecosystem,
     .network-participation,
-    .network-next-steps {
+    .network-next-steps,
+    .communication-layout,
+    .media-metrics,
+    .media-card {
         grid-template-columns: 1fr;
+    }
+
+    .carousel-caption {
+        inset: auto 0 0;
+        max-width: none;
+        position: relative;
+    }
+
+    .carousel-slide img {
+        height: 280px;
     }
 
     .micro-route-step {
