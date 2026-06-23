@@ -335,7 +335,7 @@ a {
 .project-card,
 .cv-summary,
 .cv-viewer,
-.contact-form {
+.contact-panel {
     background: var(--surface);
     border: 1px solid var(--line);
     border-radius: var(--radius);
@@ -703,7 +703,7 @@ a {
 
 .cv-summary,
 .cv-viewer,
-.contact-form,
+.contact-panel,
 .card {
     padding: 1.25rem;
 }
@@ -722,8 +722,7 @@ a {
     margin: 0;
 }
 
-.cv-source-note,
-.form-note {
+.cv-source-note {
     color: var(--muted);
     font-size: 0.9rem;
 }
@@ -795,54 +794,52 @@ a {
     font-size: 1.05rem;
 }
 
+.contact-trust {
+    border-left: 3px solid var(--green);
+    color: var(--ink-soft) !important;
+    font-weight: 700;
+    margin-top: 1.4rem;
+    padding-left: 1rem;
+}
+
+.contact-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1.6rem;
+}
+
+.contact-panel {
+    display: grid;
+    gap: 1.4rem;
+}
+
+.contact-focus-grid {
+    display: grid;
+    gap: 0.65rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.contact-focus-grid span {
+    background: var(--surface-soft);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    color: var(--ink);
+    font-size: 0.9rem;
+    font-weight: 800;
+    padding: 0.75rem;
+}
+
 .contact-links {
     display: grid;
     gap: 0.7rem;
-    margin-top: 1.5rem;
+    margin-top: 0;
 }
 
 .contact-links a {
     color: var(--blue);
     font-weight: 800;
     text-decoration: none;
-}
-
-.contact-links a[aria-disabled="true"] {
-    color: var(--muted);
-    cursor: not-allowed;
-}
-
-.contact-form {
-    display: grid;
-    gap: 1rem;
-}
-
-.contact-form label {
-    color: var(--ink);
-    display: grid;
-    font-size: 0.88rem;
-    font-weight: 800;
-    gap: 0.4rem;
-}
-
-.contact-form input,
-.contact-form textarea {
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    color: var(--ink);
-    font: inherit;
-    min-height: 46px;
-    padding: 0.75rem 0.85rem;
-}
-
-.contact-form textarea {
-    resize: vertical;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    border-color: var(--blue);
-    outline: 3px solid rgba(29, 78, 216, 0.14);
 }
 
 .site-footer,
@@ -1123,9 +1120,13 @@ details.accordion .content {
     }
 
     .hero-actions .btn,
-    .contact-form .btn {
+    .contact-actions .btn {
         min-height: 50px;
         width: 100%;
+    }
+
+    .contact-focus-grid {
+        grid-template-columns: 1fr;
     }
 
     .hero-portrait-card {

@@ -1,9 +1,6 @@
 const cvProfileData = {
     source: "assets/docs/gilberto-valenzuela-cv.pdf",
     updated: "2026-06-23",
-    contact: {
-        whatsapp: ""
-    },
     sections: [
         {
             title: "Formación",
@@ -155,34 +152,11 @@ const hydrateCvSummary = () => {
     }
 };
 
-const setupContactForm = () => {
-    const form = qs("#contact-form");
-    const note = qs("#form-note");
-    const whatsappLink = qs("[data-whatsapp-link]");
-
-    if (whatsappLink && cvProfileData.contact.whatsapp) {
-        whatsappLink.href = `https://wa.me/${cvProfileData.contact.whatsapp}`;
-        whatsappLink.textContent = "WhatsApp institucional";
-        whatsappLink.removeAttribute("aria-disabled");
-        whatsappLink.setAttribute("target", "_blank");
-        whatsappLink.setAttribute("rel", "noopener");
-    } else if (whatsappLink) {
-        whatsappLink.addEventListener("click", (event) => event.preventDefault());
-    }
-
-    if (!form || !note) return;
-
-    form.addEventListener("submit", () => {
-        note.textContent = "Se abrirá tu cliente de correo para enviar la solicitud.";
-    });
-};
-
 const init = () => {
     setupNavigation();
     setupReveal();
     animateKpis();
     hydrateCvSummary();
-    setupContactForm();
 };
 
 document.addEventListener("DOMContentLoaded", init);
