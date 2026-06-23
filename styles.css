@@ -1021,6 +1021,222 @@ details.accordion .content {
     padding-top: 1rem;
 }
 
+.micro-page {
+    background: var(--surface);
+}
+
+.micro-hero {
+    background:
+        linear-gradient(135deg, rgba(11, 18, 32, 0.96), rgba(25, 41, 71, 0.92)),
+        radial-gradient(circle at 18% 20%, rgba(29, 78, 216, 0.2), transparent 34%),
+        radial-gradient(circle at 82% 18%, rgba(15, 138, 100, 0.18), transparent 30%);
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+.micro-hero::before {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    background-size: 72px 72px;
+    content: "";
+    inset: 0;
+    opacity: 0.22;
+    pointer-events: none;
+    position: absolute;
+}
+
+.micro-hero-grid {
+    align-items: center;
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.8fr);
+    position: relative;
+    z-index: 1;
+}
+
+.micro-hero-copy h1 {
+    color: #fff;
+    font-size: clamp(2.5rem, 6vw, 5.2rem);
+    letter-spacing: 0;
+    line-height: 0.95;
+    margin: 0 0 1.2rem;
+}
+
+.micro-hero .eyebrow,
+.micro-hero .hero-subtitle {
+    color: #dbeafe;
+}
+
+.micro-hero-panel,
+.micro-text-panel,
+.micro-linkage-panel,
+.micro-status-card {
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid rgba(217, 225, 234, 0.9);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    color: var(--ink-soft);
+    padding: 2rem;
+}
+
+.micro-hero-panel h2,
+.micro-status-card h2 {
+    color: var(--ink);
+    margin-top: 0;
+}
+
+.micro-proof-list {
+    display: grid;
+    gap: 0.9rem;
+    margin: 1.5rem 0 0;
+}
+
+.micro-proof-list div {
+    border-top: 1px solid var(--line);
+    padding-top: 0.9rem;
+}
+
+.micro-proof-list dt {
+    color: var(--muted);
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.micro-proof-list dd {
+    color: var(--ink);
+    font-weight: 800;
+    margin: 0.15rem 0 0;
+}
+
+.micro-split {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1fr);
+}
+
+.micro-card-grid,
+.micro-solution-grid,
+.micro-benefit-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.micro-card,
+.micro-solution-card,
+.micro-benefit,
+.micro-route-step {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: 0 12px 32px rgba(11, 18, 32, 0.05);
+    padding: 1.4rem;
+}
+
+.micro-card span,
+.micro-route-step span {
+    align-items: center;
+    background: var(--ink);
+    border-radius: var(--radius);
+    color: #fff;
+    display: inline-flex;
+    font-size: 0.78rem;
+    font-weight: 900;
+    height: 34px;
+    justify-content: center;
+    margin-bottom: 1rem;
+    width: 34px;
+}
+
+.micro-card h3,
+.micro-solution-card h3,
+.micro-route-step h3 {
+    color: var(--ink);
+    margin: 0 0 0.6rem;
+}
+
+.micro-card p,
+.micro-solution-card p,
+.micro-route-step p,
+.micro-text-panel p,
+.micro-linkage-panel p {
+    color: var(--muted);
+}
+
+.micro-route-header {
+    max-width: 820px;
+}
+
+.micro-route {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin-top: 2rem;
+}
+
+.micro-route-step {
+    min-height: 270px;
+}
+
+.micro-route-step small {
+    color: var(--green);
+    display: block;
+    font-weight: 800;
+    margin-top: 1rem;
+}
+
+.micro-benefit {
+    display: grid;
+    gap: 0.45rem;
+}
+
+.micro-benefit strong {
+    color: var(--ink);
+    font-size: 1.05rem;
+}
+
+.micro-benefit span {
+    color: var(--muted);
+}
+
+.micro-linkage-panel {
+    display: grid;
+    gap: 1rem;
+}
+
+.micro-linkage-panel article {
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 1rem;
+}
+
+.micro-linkage-panel article:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.micro-linkage-panel strong {
+    color: var(--ink);
+}
+
+.micro-status-section {
+    background: var(--ink);
+}
+
+.micro-status-card {
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.micro-status-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+}
+
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
@@ -1072,6 +1288,8 @@ details.accordion .content {
     .two-column,
     .contact-layout,
     .cv-layout,
+    .micro-hero-grid,
+    .micro-split,
     .cenatra-platform-hero-grid,
     .cenatra-course-feature,
     .cenatra-completion-panel,
@@ -1093,6 +1311,10 @@ details.accordion .content {
     .alliance-grid,
     .institutional-grid {
         grid-template-columns: 1fr;
+    }
+
+    .micro-route {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .project-card-wide {
@@ -1120,7 +1342,8 @@ details.accordion .content {
     }
 
     .hero-actions .btn,
-    .contact-actions .btn {
+    .contact-actions .btn,
+    .micro-status-actions .btn {
         min-height: 50px;
         width: 100%;
     }
@@ -1147,5 +1370,28 @@ details.accordion .content {
 
     .cv-viewer object {
         height: 460px;
+    }
+
+    .micro-hero {
+        padding-top: 4rem;
+    }
+
+    .micro-hero-copy h1 {
+        font-size: 2.6rem;
+    }
+
+    .micro-hero-panel,
+    .micro-text-panel,
+    .micro-linkage-panel,
+    .micro-status-card {
+        padding: 1.2rem;
+    }
+
+    .micro-route {
+        grid-template-columns: 1fr;
+    }
+
+    .micro-route-step {
+        min-height: auto;
     }
 }
