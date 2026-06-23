@@ -497,6 +497,46 @@ a {
     margin-top: 0.5rem;
 }
 
+.institutional-section {
+    background: #fff;
+}
+
+.institutional-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.institutional-card {
+    background: linear-gradient(180deg, #fff, #f8fafc);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    min-height: 170px;
+    padding: 1.2rem;
+}
+
+.institutional-card span {
+    color: var(--green);
+    display: block;
+    font-size: 0.76rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    margin-bottom: 1.1rem;
+    text-transform: uppercase;
+}
+
+.institutional-card strong {
+    color: var(--ink);
+    display: block;
+    font-size: 1.08rem;
+    line-height: 1.25;
+}
+
+.institutional-card p {
+    color: var(--muted);
+    margin: 0.7rem 0 0;
+}
+
 .section-heading {
     margin-bottom: 2.2rem;
     max-width: 780px;
@@ -550,6 +590,19 @@ a {
     font-size: 1.45rem;
     line-height: 1.16;
     margin: 0;
+}
+
+.strategic-label {
+    align-self: flex-start;
+    background: #ecfdf5;
+    border: 1px solid #b7ead4;
+    border-radius: 999px;
+    color: #047857;
+    font-size: 0.78rem;
+    font-weight: 900;
+    margin: -0.25rem 0 0;
+    padding: 0.4rem 0.75rem;
+    text-transform: uppercase;
 }
 
 .project-details {
@@ -1040,7 +1093,8 @@ details.accordion .content {
     .project-grid,
     .details-grid,
     .kpi-grid,
-    .alliance-grid {
+    .alliance-grid,
+    .institutional-grid {
         grid-template-columns: 1fr;
     }
 
