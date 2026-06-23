@@ -1,327 +1,391 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Gilberto Valenzuela Herrera | Portafolio Académico</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Gilberto Valenzuela Herrera | Portafolio Ejecutivo</title>
+    <meta name="description" content="Portafolio ejecutivo de Gilberto Valenzuela Herrera: salud, educación, tecnología, microcredenciales, innovación universitaria y desarrollo comunitario.">
+    <meta name="author" content="Gilberto Valenzuela Herrera">
+    <meta name="theme-color" content="#0b1220">
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Gilberto Valenzuela Herrera | Portafolio Ejecutivo">
+    <meta property="og:description" content="Proyectos que conectan salud, educación, tecnología y desarrollo social.">
+    <meta property="og:url" content="https://gilbertovalenzuela.com/">
+    <meta property="og:locale" content="es_MX">
+    <link rel="canonical" href="https://gilbertovalenzuela.com/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Gilberto Valenzuela Herrera",
+        "jobTitle": "Medico, gestor de innovacion en salud y desarrollador de proyectos educativos",
+        "affiliation": {
+            "@type": "CollegeOrUniversity",
+            "name": "Universidad Autonoma de Guerrero"
+        },
+        "url": "https://gilbertovalenzuela.com/",
+        "sameAs": [
+            "https://orcid.org/0000-0003-2443-1051",
+            "https://scholar.google.es/citations?user=XbuuacoAAAAJ&hl=es",
+            "https://www.facebook.com/Dr.Gilface/"
+        ],
+        "knowsAbout": [
+            "Innovacion en salud",
+            "Educacion superior",
+            "Microcredenciales",
+            "Transformacion digital",
+            "Trabajo social de la emergencia",
+            "Desarrollo comunitario"
+        ]
+    }
+    </script>
 </head>
 <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-    <!-- Navegación -->
-    <header class="navbar">
-        <div class="container nav-container">
-            <h1 class="logo">Dr. Gilberto Valenzuela</h1>
-            <nav>
+    <header class="site-header" data-header>
+        <div class="container nav-shell">
+            <a class="brand" href="#inicio" aria-label="Ir al inicio">
+                <span class="brand-mark" aria-hidden="true">GVH</span>
+                <span>
+                    <strong>Gilberto Valenzuela</strong>
+                    <small>Portafolio ejecutivo</small>
+                </span>
+            </a>
+
+            <button class="menu-toggle" id="mobile-menu" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="primary-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="primary-nav" id="primary-nav" aria-label="Navegación principal">
                 <ul class="nav-links">
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#sobre-mi">Sobre mí</a></li>
-                    <li><a href="#asignatura">Asignatura</a></li>
-                    <li><a href="#proyectos">Investigación</a></li>
+                    <li><a href="#perfil">Perfil</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#impacto">Impacto</a></li>
+                    <li><a href="#colaboracion">Colaboración</a></li>
+                    <li><a href="#cv">CV</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </nav>
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
         </div>
     </header>
 
-    <!-- Inicio / Hero -->
-    <section id="inicio" class="hero section hero-creative">
-        <div class="container fade-in">
-            <div class="hero-content-wrapper">
-                <div class="hero-badge">🧬 Investigador y Creador</div>
-                <h2 class="hero-title">Dr. Gilberto Valenzuela Herrera</h2>
-                
-                <div class="hero-tags">
-                    <span class="tag-pill">🌱 Innovación en salud universitaria</span>
-                    <span class="tag-pill">🤝 Economía social</span>
-                    <span class="tag-pill">🚨 Trabajo social de la emergencia</span>
-                    <span class="tag-pill">🎧 Producción sonora y etnografía</span>
-                </div>
-                
-                <p class="hero-text">
-                    Este sitio reúne docencia, investigación, innovación tecnológica y creación sonora para pensar la acción colectiva desde la economía social, la salud universitaria y los territorios.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#asignatura" class="btn btn-primary btn-fun">Entrar a la asignatura 🚀</a>
-                    <a href="#proyectos" class="btn btn-secondary btn-fun">Ver proyectos 💡</a>
-                    <a href="#multimedia" class="btn btn-accent btn-fun">Escuchar bienvenida sonora 🎧</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sobre mí -->
-    <section id="sobre-mi" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">Sobre mí</h2>
-            <div class="about-content fade-in">
-                <p>
-                    Profesor investigador de la <strong>Universidad Autónoma de Guerrero (UAGro)</strong> y <strong>Doctorando en Trabajo Social por la Universitat Rovira i Virgili</strong>. Mi trabajo articula la educación, la economía social, el trabajo social de la emergencia y el cuidado comunitario. 
-                </p>
-                <p>
-                    Actualmente lidero la <strong>Dirección de Innovación en Salud Universitaria</strong>, coordinando iniciativas como el programa "Por Amor a la Vida UAGro" y el curso nacional "Líder Promotor Universitario en Cultura de Donación de Órganos y Tejidos" en alianza con el Centro Nacional de Trasplantes (CENATRA). Formo parte del núcleo académico de la Maestría en Economía Social UAGro e integro perspectivas transdisciplinarias, como la etnografía sonora, en mis líneas de generación de conocimiento.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Asignatura -->
-    <section id="asignatura" class="section microsite">
-        <div class="container">
-            <div class="microsite-header">
-                <h2 class="section-title">Teoría de la Acción Colectiva — Inspiración Colectiva</h2>
-                <p class="microsite-desc">
-                    La asignatura propone estudiar la acción colectiva no solo como teoría social, sino como experiencia viva de colaboración, organización, creatividad y transformación. Desde la Maestría en Economía Social de la UAGro, se abordará la relación entre economía social, cooperación, comunidad, creatividad, innovación y proyectos colectivos.
-                </p>
-            </div>
-
-            <!-- Bienvenida Sonora -->
-            <div id="multimedia" class="spotify-embed-container fade-in" style="margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-                <h3 class="subsection-title" style="margin-bottom: 1rem; text-align: center;">🎧 Bienvenida Sonora</h3>
-                <p class="audio-desc" style="text-align: center; margin-bottom: 1.5rem; color: var(--color-gray);">
-                    Antes de leer el programa, acompáñame y <strong>dale play</strong>. 
-                    <em>La acción colectiva también se siente, se escucha y se construye.</em>
-                </p>
-                <iframe data-testid="embed-iframe" style="border-radius:12px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);" src="https://open.spotify.com/embed/episode/37NvhuGGcJhyiO2olKO5XG?utm_source=generator&t=1" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            </div>
-
-            <!-- Programa -->
-            <div class="program-section text-center">
-                <a href="https://drive.google.com/file/d/1iY5Zab-kLQq6dmwTX0BnCRiDs0gUHtT9/view?usp=sharing" class="btn btn-primary" target="_blank">
-                    📄 Descargar programa de la asignatura (PDF)
-                </a>
-                <a href="https://classroom.google.com/c/ODYzNTY5MTYzNzg3?cjc=ty3qcz4m" target="_blank" class="btn btn-accent">
-                    🎓 Ir al Classroom oficial
-                </a>
-            </div>
-
-            <div class="grid list-grid">
-                <!-- Lecturas -->
-                <div class="column-card">
-                    <h3 class="subsection-title">Lecturas Principales</h3>
-                    <div class="vertical-cards">
-                        <div class="card">
-                            <h4>1. Ostrom, E. (2011). El gobierno de los bienes comunes.</h4>
-                            <p>La evolución de las instituciones de la acción colectiva.</p>
-                            <a href="#" class="btn btn-outline btn-sm">Buscar en biblioteca</a>
-                        </div>
-                        <div class="card">
-                            <h4>2. Tarrow, S. (2004). El poder en movimiento.</h4>
-                            <p>Los movimientos sociales, la acción colectiva y la política.</p>
-                            <a href="#" class="btn btn-outline btn-sm">Buscar en biblioteca</a>
-                        </div>
-                        <div class="card">
-                            <h4>3. Melucci, A. (1999). Acción colectiva, vida cotidiana y democracia.</h4>
-                            <p>Perspectivas sobre la identidad colectiva.</p>
-                            <a href="#" class="btn btn-outline btn-sm">Buscar en biblioteca</a>
-                        </div>
-                        <div class="card">
-                            <h4>4. Poteet, Jansen & Ostrom (2012). Trabajar juntos.</h4>
-                            <p>Acción colectiva, bienes comunes y múltiples métodos en la práctica.</p>
-                            <a href="#" class="btn btn-outline btn-sm">Buscar en biblioteca</a>
-                        </div>
-                        <div class="card" style="text-align: center; border: 1px dashed var(--color-gray); box-shadow: none;">
-                            <p><em>Para la bibliografía completa, consulta el programa.</em></p>
-                        </div>
+    <main id="contenido">
+        <section id="inicio" class="hero section">
+            <div class="container hero-grid">
+                <div class="hero-copy reveal">
+                    <p class="eyebrow">Salud universitaria · Educación superior · Innovación social</p>
+                    <h1>Gilberto Valenzuela Herrera</h1>
+                    <p class="hero-subtitle">Médico · Gestor de Innovación en Salud · Desarrollador de Proyectos Educativos y Comunitarios</p>
+                    <p class="hero-lede">Construyo proyectos que conectan salud, educación, tecnología y desarrollo social.</p>
+                    <div class="hero-actions" aria-label="Acciones principales">
+                        <a class="btn btn-primary" href="#proyectos">Ver proyectos</a>
+                        <a class="btn btn-secondary" href="assets/docs/gilberto-valenzuela-cv.pdf" download>Descargar CV</a>
+                        <a class="btn btn-ghost" href="#contacto">Contactar</a>
                     </div>
                 </div>
 
-                <!-- Ruta de aprendizaje -->
-                <div class="column-card">
-                    <h3 class="subsection-title">Contenidos del curso (Desplegables)</h3>
-                    <div class="timeline" style="border:none; padding:0;">
-                        
-                        <details class="accordion">
-                            <summary><strong>Unidad 1:</strong> El problema de las clases y la acción colectiva</summary>
-                            <div class="content">Introducción a la formación de clases como actores de la acción colectiva. Paradigmas clásicos y su vigencia en las sociedades contemporáneas.</div>
-                        </details>
-                        
-                        <details class="accordion">
-                            <summary><strong>Unidad 2:</strong> Teorías clásicas y posclásicas de los movimientos sociales</summary>
-                            <div class="content">Transición de la perspectiva marxista a la teoría de movilización de recursos y nuevos movimientos sociales. Identidad y cultura.</div>
-                        </details>
-                        
-                        <details class="accordion">
-                            <summary><strong>Unidad 3:</strong> Análisis de clase y movimientos sociales</summary>
-                            <div class="content">Relación entre la posición estructural y la propensión a la movilización colectiva.</div>
-                        </details>
-
-                        <details class="accordion">
-                            <summary><strong>Unidad 4:</strong> Acción colectiva y recursos de uso común (RUC)</summary>
-                            <div class="content">Basado en Elinor Ostrom. Instituciones, gobernanza comunitaria, evitar la tragedia de los comunes y reglas de diseño.</div>
-                        </details>
-
-                        <details class="accordion">
-                            <summary><strong>Unidad 5:</strong> Democracia, pluralismo y estatismo</summary>
-                            <div class="content">El papel del Estado frente a la multiplicidad de intereses organizados en la sociedad civil.</div>
-                        </details>
-
-                        <details class="accordion">
-                            <summary><strong>Unidad 6:</strong> La sociedad civil organizada y ONGs</summary>
-                            <div class="content">Surgimiento, financiamiento e incidencia en la formulación de políticas públicas internacionales y locales.</div>
-                        </details>
-
-                        <details class="accordion">
-                            <summary><strong>Unidad 7:</strong> El Capital social y la Confianza</summary>
-                            <div class="content">Redes, normas de reciprocidad y confianza que facilitan la coordinación y cooperación para el beneficio mutuo.</div>
-                        </details>
-
-                        <details class="accordion">
-                            <summary><strong>Unidad 8:</strong> Teoría del conflicto y su manejo</summary>
-                            <div class="content">Mecanismos de resolución de controversias inter e intra comunitarias en el marco de la acción colectiva.</div>
-                        </details>
-
-                    </div>
-                </div>
-            </div>
-
-            <!-- Espacio Colaborativo -->
-            <div class="colab-section text-center">
-                <h3 class="subsection-title">Espacio colaborativo</h3>
-                <div class="colab-grid">
-                    <a href="#" class="colab-btn" data-modal="muro">Muro de ideas</a>
-                    <a href="#" class="colab-btn" data-modal="bitacora">Bitácora colectiva</a>
-                    <a href="#" class="colab-btn" data-modal="podcast">Podcast de la asignatura</a>
-                    <a href="#" class="colab-btn" data-modal="proyectos">Banco de proyectos</a>
-                    <a href="#" class="colab-btn" data-modal="galeria">Galería de experiencias</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Proyectos / LGAC -->
-    <section id="proyectos" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">Investigación y Proyectos</h2>
-            <div class="grid projects-grid">
-                <div class="card project-card">
-                    <h3>Innovación en Salud Universitaria</h3>
-                    <p>Diseño e implementación del curso nacional virtual "Líder Promotor Universitario en Cultura de Donación de Órganos y Tejidos" y campaña "Por Amor a la Vida UAGro".</p>
-                    <a href="https://saberes.uagro.mx/" target="_blank" class="btn btn-outline btn-sm" style="margin-top: 10px;">Ver Curso (Líder Promotor UAGro)</a>
-                </div>
-                <div class="card project-card">
-                    <h3>Economía Social y Acción Colectiva</h3>
-                    <p>Línea de Generación y Aplicación del Conocimiento dentro del Núcleo Académico Básico de la Maestría en Economía Social.</p>
-                    <p style="margin-top: 10px;"><em>Colaboración en dirección de tesis con:</em> Dulce Martínez (Maestrante) en el desarrollo del colectivo "Mujeres y raíces", iniciadoras del tianguis viverista de La Poza.</p>
-                </div>
-                <div class="card project-card">
-                    <h3>Trabajo Social de la Emergencia</h3>
-                    <p>[Descripción a complementar]</p>
-                </div>
-                <div class="card project-card">
-                    <h3>Huertos Medicinales: Poner los pies y manos sobre la tierra</h3>
-                    <p>Proyecto socioeducativo y comunitario implementado en jardines de niños en Acapulco, enfocado en el aprendizaje práctico, la salud comunitaria y el contacto directo con la naturaleza.</p>
-                    <a href="https://www.facebook.com/share/p/1bYzBgsH7v/" target="_blank" class="btn btn-outline btn-sm" style="margin-top: 10px;">Ver en Facebook 📸</a>
-                </div>
-                <div class="card project-card">
-                    <h3>Sabiduría del Payaso</h3>
-                    <p>[Descripción a complementar]</p>
-                </div>
-                <div class="card project-card">
-                    <h3>Punto Cero: Acapulco <br>(Mapa Sonoro del Huracán Otis)</h3>
-                    <p>Proyecto de investigación doctoral (Universitat Rovira i Virgili). Registro sonoro, crónicas, testimonios, podcasts y autoetnografía sobre narrativas mediáticas y territoriales del Huracán Otis (2023–2025).</p>
-                    <a href="https://puntoceroacapulco.online/" target="_blank" class="btn btn-primary btn-sm" style="margin-top: 10px;">Explorar el Mapa 🎧</a>
-                </div>
-                <div class="card project-card" style="grid-column: 1 / -1;">
-                    <h3>Producción Sonora y Etnografía</h3>
-                    <p>Creación sonora aplicada a la vinculación y narrativa comunitaria desde una óptica de <strong>investigación acción creación</strong>.</p>
-                    
-                    <div style="margin-top: 2rem; text-align: left; display: flex; flex-direction: column; gap: 2rem;">
+                <aside class="executive-card reveal" aria-label="Resumen ejecutivo">
+                    <div class="profile-panel">
+                        <div class="profile-photo-placeholder" role="img" aria-label="Identidad profesional de Gilberto Valenzuela Herrera">
+                            <span>GVH</span>
+                        </div>
                         <div>
-                            <h4 style="margin-bottom: 1rem; color: var(--color-primary); font-weight: 600;">Artista / Productor</h4>
-                            <iframe data-testid="embed-iframe" style="border-radius:12px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);" src="https://open.spotify.com/embed/artist/0h5xRD9xJvxBhLHEYrPS3r?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                            <p class="card-label">Perfil institucional</p>
+                            <h2>Innovación aplicada con sentido público</h2>
+                            <p>Dirección, diseño y despliegue de proyectos educativos, sanitarios, comunitarios y digitales para instituciones.</p>
                         </div>
-                        
+                    </div>
+                    <dl class="hero-proof">
                         <div>
-                            <h4 style="margin-bottom: 1rem; color: var(--color-primary); font-weight: 600;">Álbum Sonoro: Voces de mar</h4>
-                            <iframe data-testid="embed-iframe" style="border-radius:12px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);" src="https://open.spotify.com/embed/playlist/23DXND8Yra6Z0HaoFxJg0h?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                            <dt>Enfoque</dt>
+                            <dd>Salud + educación + tecnología</dd>
                         </div>
-                    </div>
-                </div>
-                <div class="card project-card" style="grid-column: 1 / -1;">
-                    <h3>Microdosis Educativa</h3>
-                    <p>Proyecto de innovación educativa y diseminación del conocimiento mediante blog y podcast para el análisis de la cultura, salud y sociedad.</p>
-                    <a href="https://microdosiseducativa.blogspot.com/" target="_blank" class="btn btn-outline btn-sm" style="margin-top: 10px; margin-bottom: 1.5rem; display: inline-block;">Visitar Blog 📝</a>
-                    
-                    <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; margin-bottom: 1.5rem;">
-                        <img src="assets/img/MICRODOSISLOGO.png" alt="Logo Microdosis Educativa" style="max-height: 120px; border-radius: 8px; ">
-                        <img src="assets/img/prod.jpg" alt="Logo Prod" style="max-height: 120px; border-radius: 8px;">
-                    </div>
+                        <div>
+                            <dt>Base</dt>
+                            <dd>Universidad Autónoma de Guerrero</dd>
+                        </div>
+                        <div>
+                            <dt>Alcance</dt>
+                            <dd>Proyectos locales, nacionales y digitales</dd>
+                        </div>
+                    </dl>
+                </aside>
+            </div>
+        </section>
 
-                    <div style="margin-top: 1rem;">
-                        <h4 style="margin-bottom: 1rem; color: var(--color-primary); font-weight: 600;">Podcast: Microdosis Educativa</h4>
-                        <iframe data-testid="embed-iframe" style="border-radius:12px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);" src="https://open.spotify.com/embed/show/23DL3UJLnQKXGqfHvl1O4w?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <section id="perfil" class="section profile-section">
+            <div class="container two-column">
+                <div class="section-copy reveal">
+                    <p class="eyebrow">Perfil profesional</p>
+                    <h2>Un operador académico capaz de convertir necesidades públicas en plataformas, programas y alianzas.</h2>
+                </div>
+                <div class="profile-text reveal">
+                    <p>
+                        Médico cirujano, docente universitario y gestor de innovación en salud con experiencia en el diseño de proyectos educativos, comunitarios y digitales. Su trabajo articula salud universitaria, cultura de donación, microcredenciales, economía social, investigación aplicada y desarrollo tecnológico. Ha impulsado plataformas y programas formativos orientados a resolver problemas institucionales con enfoque público, escalabilidad y evidencia. Actualmente dirige iniciativas de innovación en salud universitaria, participa en proyectos de transformación digital y cursa estudios doctorales en Trabajo Social, integrando gestión, docencia, investigación y acción comunitaria.
+                    </p>
+                    <div class="capability-strip" aria-label="Capacidades destacadas">
+                        <span>Médico cirujano</span>
+                        <span>Docente universitario</span>
+                        <span>Gestor de innovación</span>
+                        <span>Diseñador de microcredenciales</span>
+                        <span>Desarrollador de plataformas</span>
+                        <span>Líder comunitario</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Publicaciones y tesis -->
-    <!-- Multimedia -->
-    <section class="section bg-light">
-        <div class="container text-center">
-            <h2 class="section-title">Explora Multimedia y Entrevistas</h2>
-            <div class="grid multimedia-grid">
-                <div class="card">
-                    <h4>Entrevista Oficial</h4>
-                    <p>Participación y reflexión social.</p>
-                    <a href="https://www.youtube.com/watch?v=fCl8Ntqc5qw" target="_blank" class="btn btn-secondary btn-sm">Ver en YouTube 🎥</a>
-                </div>
-                <div class="card">
-                    <h4>Mapa Sonoro "Punto Cero" (Otis)</h4>
-iv>
-                    <h3 class="subsection-title" style="margin-bottom: 1.5rem;">Podcast: Microdosis Educativa</h3>
-                    <iframe data-testid="embed-iframe" style="border-radius:12px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);" src="https://open.spotify.com/embed/show/23DL3UJLnQKXGqfHvl1O4w?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                </div>
-
+            <div class="container">
+                <ol class="timeline reveal" aria-label="Trayectoria profesional">
+                    <li>
+                        <span>Formación médica</span>
+                        <strong>Base clínica y visión de salud pública.</strong>
+                    </li>
+                    <li>
+                        <span>Docencia universitaria</span>
+                        <strong>Diseño de experiencias formativas y acompañamiento académico.</strong>
+                    </li>
+                    <li>
+                        <span>Innovación institucional</span>
+                        <strong>Gestión de programas, alianzas y plataformas en salud universitaria.</strong>
+                    </li>
+                    <li>
+                        <span>Investigación doctoral</span>
+                        <strong>Trabajo social, emergencia, memoria territorial y acción colectiva.</strong>
+                    </li>
+                </ol>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contacto -->
-    <section id="contacto" class="section">
-        <div class="container text-center">
-            <h2 class="section-title">Contacto</h2>
-            <p class="contact-msg" style="max-width:600px; margin: 0 auto; margin-bottom: 2rem;">
-                "Este sitio está abierto a estudiantes, investigadores, colectivos, instituciones y comunidades interesadas en construir conocimiento con sentido social."
-            </p>
-            <div class="contact-info card" style="display:inline-block; text-align:left; padding: 2rem;">
-                <p><strong>Institución:</strong> Universidad Autónoma de Guerrero (UAGro)</p>
-                <p><strong>Red de Investigación:</strong> REDESSGRO / Maestría en Economía Social</p>
-                <p><strong>ORCID:</strong> <a href="https://orcid.org/0000-0003-2443-1051" target="_blank">0000-0003-2443-1051</a></p>
-                <div class="social-links" style="margin-top: 1rem; display:flex; gap: 1rem; flex-wrap:wrap">
-                    <a href="https://www.facebook.com/Dr.Gilface/" target="_blank" class="btn btn-primary">Facebook Profesional</a>
-                    <a href="https://scholar.google.es/citations?user=XbuuacoAAAAJ&hl=es" target="_blank" class="btn btn-secondary">Google Scholar</a>
-                    <a href="https://meconomiasocial.uagro.mx/" target="_blank" class="btn btn-outline">Maestría Economía Social</a>
-                </div>
+        <section id="proyectos" class="section bg-soft">
+            <div class="container section-heading reveal">
+                <p class="eyebrow">Proyectos estratégicos</p>
+                <h2>Portafolio de soluciones con impacto institucional y comunitario.</h2>
+                <p>Tarjetas ejecutivas diseñadas para revisar problema, solución, impacto, evidencia y activos documentales de cada iniciativa.</p>
             </div>
-        </div>
-    </section>
 
-    <footer class="footer">
-        <div class="container text-center">
-            <p>&copy; 2026 Dr. Gilberto Valenzuela Herrera. Creado para la academia y la innovación social.</p>
+            <div class="container project-grid">
+                <article class="project-card reveal">
+                    <div class="project-topline">
+                        <span>01</span>
+                        <a href="https://saberes.uagro.mx/" target="_blank" rel="noopener">Evidencia externa</a>
+                    </div>
+                    <h3>Líder Promotor Universitario en Cultura de Donación</h3>
+                    <dl class="project-details">
+                        <div><dt>Problema</dt><dd>Baja cultura de donación y falta de promotores universitarios formados.</dd></div>
+                        <div><dt>Solución</dt><dd>Curso nacional virtual con enfoque ciudadano, universitario y sanitario.</dd></div>
+                        <div><dt>Impacto</dt><dd>Modelo escalable para sensibilización, aprendizaje y vinculación con CENATRA.</dd></div>
+                    </dl>
+                    <div class="tag-list"><span>LMS</span><span>Salud pública</span><span>Cultura de donación</span><span>Microcredenciales</span></div>
+                    <div class="project-actions">
+                        <a href="https://saberes.uagro.mx/" target="_blank" rel="noopener">Ver curso</a>
+                        <a href="cenatra-microcredenciales.html">Documentos</a>
+                    </div>
+                </article>
+
+                <article class="project-card reveal">
+                    <div class="project-topline">
+                        <span>02</span>
+                        <a href="#contacto">Solicitar demo</a>
+                    </div>
+                    <h3>Sistema de Atención en Salud Universitaria (SASU)</h3>
+                    <dl class="project-details">
+                        <div><dt>Problema</dt><dd>Fragmentación de servicios, seguimiento clínico y gestión de atención universitaria.</dd></div>
+                        <div><dt>Solución</dt><dd>Plataforma operativa para organizar expedientes, atención, tickets y trazabilidad.</dd></div>
+                        <div><dt>Impacto</dt><dd>Base digital para una política universitaria de salud con datos y continuidad.</dd></div>
+                    </dl>
+                    <div class="tag-list"><span>FastAPI</span><span>Flutter</span><span>Cosmos DB</span><span>Gestión clínica</span></div>
+                    <div class="project-actions">
+                        <a href="#impacto">Impacto</a>
+                        <a href="#cv">Ficha CV</a>
+                    </div>
+                </article>
+
+                <article class="project-card reveal">
+                    <div class="project-topline">
+                        <span>03</span>
+                        <a href="#contacto">Colaborar</a>
+                    </div>
+                    <h3>Carnet Digital Universitario</h3>
+                    <dl class="project-details">
+                        <div><dt>Problema</dt><dd>Identificación, acceso y validación institucional con procesos dispersos.</dd></div>
+                        <div><dt>Solución</dt><dd>Credencial digital para estudiantes con integración web, móvil y servicios institucionales.</dd></div>
+                        <div><dt>Impacto</dt><dd>Mejora de experiencia estudiantil y habilitación de servicios universitarios digitales.</dd></div>
+                    </dl>
+                    <div class="tag-list"><span>Identidad digital</span><span>Flutter Web</span><span>Automatización</span><span>Servicios</span></div>
+                    <div class="project-actions">
+                        <a href="#colaboracion">Áreas</a>
+                        <a href="#contacto">Contacto</a>
+                    </div>
+                </article>
+
+                <article class="project-card reveal">
+                    <div class="project-topline">
+                        <span>04</span>
+                        <a href="https://puntoceroacapulco.online/" target="_blank" rel="noopener">Galería sonora</a>
+                    </div>
+                    <h3>Punto Cero: Memorias Sonoras del Huracán Otis</h3>
+                    <dl class="project-details">
+                        <div><dt>Problema</dt><dd>Las memorias territoriales de la emergencia suelen quedar fuera de los indicadores oficiales.</dd></div>
+                        <div><dt>Solución</dt><dd>Mapa sonoro con testimonios, crónicas y registros de campo sobre Otis.</dd></div>
+                        <div><dt>Impacto</dt><dd>Evidencia cualitativa para investigación doctoral, memoria pública y escucha comunitaria.</dd></div>
+                    </dl>
+                    <div class="tag-list"><span>Etnografía sonora</span><span>Mapa digital</span><span>Trabajo social</span><span>Memoria</span></div>
+                    <div class="project-actions">
+                        <a href="https://puntoceroacapulco.online/" target="_blank" rel="noopener">Explorar</a>
+                        <a href="#cv">Documentos</a>
+                    </div>
+                </article>
+
+                <article class="project-card reveal project-card-wide">
+                    <div class="project-topline">
+                        <span>05</span>
+                        <a href="cenatra-microcredenciales.html">Ver micrositio</a>
+                    </div>
+                    <h3>Microcredenciales y Marco Nacional de Cualificaciones</h3>
+                    <dl class="project-details details-grid">
+                        <div><dt>Problema</dt><dd>Las instituciones necesitan evidencias de aprendizaje verificables y rutas cortas de formación.</dd></div>
+                        <div><dt>Solución</dt><dd>Arquitectura educativa para cursos, insignias, constancias y trayectorias progresivas.</dd></div>
+                        <div><dt>Impacto</dt><dd>Conecta formación universitaria, necesidades públicas, competencias y colaboración interinstitucional.</dd></div>
+                    </dl>
+                    <div class="tag-list"><span>Diseño instruccional</span><span>Badges</span><span>Competencias</span><span>Gobierno digital</span><span>CENATRA</span></div>
+                    <div class="project-actions">
+                        <a href="cenatra-microcredenciales.html">Galería y documentos</a>
+                        <a href="#contacto">Presentar a institución</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="impacto" class="section impact-section">
+            <div class="container section-heading reveal">
+                <p class="eyebrow">Resultados e impacto</p>
+                <h2>Indicadores para comprender el alcance en menos de un minuto.</h2>
+            </div>
+
+            <div class="container kpi-grid reveal" aria-label="Indicadores destacados">
+                <article class="kpi-card"><strong data-count="10">0</strong><span>Años de experiencia profesional y académica</span></article>
+                <article class="kpi-card"><strong data-count="5">0</strong><span>Proyectos estratégicos desarrollados</span></article>
+                <article class="kpi-card"><strong data-count="6">0</strong><span>Áreas de innovación articuladas</span></article>
+                <article class="kpi-card"><strong data-count="4">0</strong><span>Plataformas y rutas digitales implementadas</span></article>
+                <article class="kpi-card"><strong data-count="8">0</strong><span>Instituciones y comunidades vinculadas</span></article>
+                <article class="kpi-card"><strong data-count="3">0</strong><span>Líneas de investigación aplicada</span></article>
+            </div>
+        </section>
+
+        <section id="colaboracion" class="section bg-soft">
+            <div class="container section-heading reveal">
+                <p class="eyebrow">Áreas de colaboración</p>
+                <h2>Campos donde puede aportar dirección, diseño, operación y evidencia.</h2>
+            </div>
+
+            <div class="container collaboration-grid reveal">
+                <span>Gestión de proyectos</span>
+                <span>Innovación en salud</span>
+                <span>Transformación digital</span>
+                <span>Cultura de donación y trasplantes</span>
+                <span>Microcredenciales</span>
+                <span>Educación superior</span>
+                <span>Investigación aplicada</span>
+                <span>Vinculación institucional</span>
+                <span>Desarrollo comunitario</span>
+            </div>
+        </section>
+
+        <section id="cv" class="section cv-section">
+            <div class="container section-heading reveal">
+                <p class="eyebrow">Currículum vitae</p>
+                <h2>Resumen ejecutivo alimentado desde el perfil profesional y el CV integrado.</h2>
+                <p>El PDF queda disponible para descarga y visualización dentro del sitio. El resumen se hidrata desde datos estructurados en JavaScript para mantener el portafolio actualizable.</p>
+            </div>
+
+            <div class="container cv-layout">
+                <article class="cv-summary reveal" aria-labelledby="cv-summary-title">
+                    <div class="summary-header">
+                        <div>
+                            <p class="card-label">Fuente principal</p>
+                            <h3 id="cv-summary-title">Resumen Ejecutivo</h3>
+                        </div>
+                        <a class="btn btn-primary btn-small" href="assets/docs/gilberto-valenzuela-cv.pdf" download>Descargar CV PDF</a>
+                    </div>
+                    <div class="cv-source-note" id="cv-source-note">Fuente local: assets/docs/gilberto-valenzuela-cv.pdf</div>
+                    <div class="summary-grid" id="cv-summary"></div>
+                </article>
+
+                <aside class="cv-viewer reveal" aria-label="Visualizador de CV">
+                    <object data="assets/docs/gilberto-valenzuela-cv.pdf#toolbar=0&navpanes=0" type="application/pdf">
+                        <p>Tu navegador no pudo mostrar el PDF. <a href="assets/docs/gilberto-valenzuela-cv.pdf">Abrir CV en una pestaña nueva</a>.</p>
+                    </object>
+                </aside>
+            </div>
+        </section>
+
+        <section id="alianzas" class="section bg-soft">
+            <div class="container section-heading reveal">
+                <p class="eyebrow">Testimonios y alianzas</p>
+                <h2>Entorno institucional y redes de colaboración.</h2>
+            </div>
+            <div class="container alliance-grid reveal" aria-label="Instituciones vinculadas">
+                <article><strong>UAGro</strong><span>Universidad Autónoma de Guerrero</span></article>
+                <article><strong>CENATRA</strong><span>Cultura de donación y trasplantes</span></article>
+                <article><strong>REDESSGRO</strong><span>Economía social y redes académicas</span></article>
+                <article><strong>URV</strong><span>Investigación doctoral en Trabajo Social</span></article>
+                <article><strong>Comunidades</strong><span>Proyectos territoriales y memoria pública</span></article>
+            </div>
+        </section>
+
+        <section id="contacto" class="section contact-section">
+            <div class="container contact-layout">
+                <div class="contact-copy reveal">
+                    <p class="eyebrow">Contacto institucional</p>
+                    <h2>Conversemos sobre colaboración, innovación o desarrollo de proyectos.</h2>
+                    <p>Disponible para alianzas universitarias, organismos de salud, instituciones públicas, fundaciones, centros de investigación y proyectos comunitarios.</p>
+                    <div class="contact-links">
+                        <a href="mailto:gilberto.valenzuela@uagro.mx">gilberto.valenzuela@uagro.mx</a>
+                        <a href="#" data-whatsapp-link aria-disabled="true">WhatsApp institucional: pendiente de número</a>
+                        <a href="https://orcid.org/0000-0003-2443-1051" target="_blank" rel="noopener">ORCID</a>
+                        <a href="https://scholar.google.es/citations?user=XbuuacoAAAAJ&hl=es" target="_blank" rel="noopener">Google Scholar</a>
+                        <a href="https://www.facebook.com/Dr.Gilface/" target="_blank" rel="noopener">Facebook profesional</a>
+                    </div>
+                </div>
+
+                <form class="contact-form reveal" id="contact-form" action="mailto:gilberto.valenzuela@uagro.mx" method="post" enctype="text/plain">
+                    <label>
+                        Nombre
+                        <input type="text" name="nombre" autocomplete="name" required>
+                    </label>
+                    <label>
+                        Institución
+                        <input type="text" name="institucion" autocomplete="organization">
+                    </label>
+                    <label>
+                        Correo
+                        <input type="email" name="correo" autocomplete="email" required>
+                    </label>
+                    <label>
+                        Mensaje
+                        <textarea name="mensaje" rows="5" required></textarea>
+                    </label>
+                    <button class="btn btn-primary" type="submit">Agendar conversación</button>
+                    <p class="form-note" id="form-note" role="status"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <p>&copy; 2026 Gilberto Valenzuela Herrera. Portafolio ejecutivo de innovación, salud y desarrollo social.</p>
+            <a href="#inicio">Volver arriba</a>
         </div>
     </footer>
 
-    <!-- Modal genérico Espacio Colaborativo -->
-    <div id="colab-modal" class="modal">
-        <div class="modal-content fade-in visible">
-            <span class="close-modal">&times;</span>
-            <h2 id="modal-title" style="color: var(--color-secondary); margin-bottom: 1rem;">Título</h2>
-            <div id="modal-body" style="font-size: 1.1rem; color: var(--color-gray);">Contenido...</div>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
