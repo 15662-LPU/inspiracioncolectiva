@@ -289,6 +289,7 @@ a {
     padding: 0.55rem 0.8rem;
 }
 
+.hero-portrait-card,
 .executive-card,
 .card,
 .project-card,
@@ -301,37 +302,40 @@ a {
     box-shadow: var(--shadow);
 }
 
+.hero-portrait-card,
 .executive-card {
-    padding: 1.2rem;
+    padding: 0.75rem;
 }
 
-.profile-panel {
-    border-bottom: 1px solid var(--line);
-    display: grid;
-    gap: 1.2rem;
-    grid-template-columns: 120px 1fr;
-    padding-bottom: 1.2rem;
+.hero-portrait-card {
+    box-shadow: 0 28px 80px rgba(11, 18, 32, 0.16);
+    overflow: hidden;
 }
 
-.profile-photo-placeholder {
-    align-items: center;
+.hero-portrait-frame {
     aspect-ratio: 4 / 5;
-    background: linear-gradient(145deg, #0b1220, #1d4ed8 55%, #0f8a64);
+    background: var(--surface-soft);
     border-radius: var(--radius);
-    color: #fff;
-    display: flex;
-    justify-content: center;
+    margin: 0;
+    overflow: hidden;
 }
 
-.profile-photo-placeholder span {
-    border: 1px solid rgba(255, 255, 255, 0.45);
-    border-radius: 999px;
-    font-size: 1rem;
-    font-weight: 800;
-    padding: 0.85rem;
+.hero-portrait-frame img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    width: 100%;
+}
+
+.hero-portrait-summary {
+    display: grid;
+    gap: 1rem;
+    padding: 1.25rem 0.55rem 0.55rem;
 }
 
 .executive-card h2,
+.hero-portrait-card h2,
 .section-copy h2,
 .section-heading h2,
 .contact-copy h2 {
@@ -342,12 +346,14 @@ a {
     margin: 0;
 }
 
-.executive-card h2 {
+.executive-card h2,
+.hero-portrait-card h2 {
     font-size: 1.45rem;
     line-height: 1.18;
 }
 
-.executive-card p {
+.executive-card p,
+.hero-portrait-card p {
     margin-bottom: 0;
 }
 
@@ -1010,16 +1016,11 @@ details.accordion .content {
         width: 100%;
     }
 
-    .profile-panel,
     .summary-header,
     .footer-grid {
         align-items: flex-start;
         flex-direction: column;
         display: flex;
-    }
-
-    .profile-photo-placeholder {
-        width: 100%;
     }
 
     .cv-viewer object {
