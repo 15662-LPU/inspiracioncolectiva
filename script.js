@@ -249,12 +249,122 @@ const setupActivityCarousel = () => {
     startAutoplay();
 };
 
+const setupMobileExecutiveUx = () => {
+    document.body.classList.add("has-mobile-bottom-nav");
+
+    const makeToggle = (expandedText = "Cerrar", collapsedText = "Ver mas") => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "mobile-summary-toggle";
+        button.textContent = collapsedText;
+        button.setAttribute("aria-expanded", "false");
+        button.dataset.expandedText = expandedText;
+        button.dataset.collapsedText = collapsedText;
+        return button;
+    };
+
+    qsa(".project-card").forEach((card) => {
+        if (qs(".mobile-expand-button", card)) return;
+        const details = qs(".project-details", card);
+        if (!details) return;
+
+        card.classList.add("is-mobile-collapsed");
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "mobile-expand-button";
+        button.textContent = "Ver detalles";
+        button.setAttribute("aria-expanded", "false");
+        details.before(button);
+
+        button.addEventListener("click", () => {
+            const isExpanded = card.classList.toggle("is-expanded");
+            card.classList.toggle("is-mobile-collapsed", !isExpanded);
+            button.textContent = isExpanded ? "Cerrar detalles" : "Ver detalles";
+            button.setAttribute("aria-expanded", String(isExpanded));
+        });
+    });
+
+    const collapsibleBlocks = [
+        { selector: ".flagship-why", expanded: "Cerrar contexto", collapsed: "Ver contexto" },
+        { selector: ".flagship-evidence article", expanded: "Cerrar evidencia", collapsed: "Ver evidencia" },
+        { selector: ".flagship-memory", expanded: "Cerrar memoria", collapsed: "Ver memoria" },
+        { selector: ".communication-feature", expanded: "Cerrar detalles", collapsed: "Ver detalles" }
+    ];
+
+    collapsibleBlocks.forEach(({ selector, expanded, collapsed }) => {
+        qsa(selector).forEach((block) => {
+            if (qs(".mobile-summary-toggle", block)) return;
+            block.classList.add("is-mobile-collapsed");
+            const button = makeToggle(expanded, collapsed);
+            block.append(button);
+
+            button.addEventListener("click", () => {
+                const isExpanded = block.classList.toggle("is-expanded");
+                block.classList.toggle("is-mobile-collapsed", !isExpanded);
+                button.textContent = isExpanded ? button.dataset.expandedText : button.dataset.collapsedText;
+                button.setAttribute("aria-expanded", String(isExpanded));
+            });
+        });
+    });
+};
+
+const setupGalleryLightbox = () => {
+    const images = qsa(".carousel-slide img");
+    if (!images.length) return;
+
+    images.forEach((image) => {
+        image.loading = "lazy";
+        image.decoding = "async";
+        image.tabIndex = 0;
+        image.setAttribute("role", "button");
+    });
+
+    const dialog = document.createElement("dialog");
+    dialog.className = "image-lightbox";
+    dialog.innerHTML = `
+        <button type="button" class="image-lightbox-close" aria-label="Cerrar imagen">×</button>
+        <img alt="">
+    `;
+    document.body.append(dialog);
+
+    const dialogImage = qs("img", dialog);
+    const closeButton = qs(".image-lightbox-close", dialog);
+
+    const openImage = (image) => {
+        if (!dialogImage) return;
+        dialogImage.src = image.currentSrc || image.src;
+        dialogImage.alt = image.alt || "";
+        if (typeof dialog.showModal === "function") {
+            dialog.showModal();
+        } else {
+            dialog.setAttribute("open", "");
+        }
+    };
+
+    images.forEach((image) => {
+        image.addEventListener("click", () => openImage(image));
+        image.addEventListener("keydown", (event) => {
+            if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                openImage(image);
+            }
+        });
+    });
+
+    closeButton?.addEventListener("click", () => dialog.close());
+    dialog.addEventListener("click", (event) => {
+        if (event.target === dialog) dialog.close();
+    });
+};
+
 const init = () => {
     setupNavigation();
     setupReveal();
     animateKpis();
     hydrateCvSummary();
     setupActivityCarousel();
+    setupMobileExecutiveUx();
+    setupGalleryLightbox();
 };
 
 document.addEventListener("DOMContentLoaded", init);
