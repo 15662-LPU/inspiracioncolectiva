@@ -2034,6 +2034,15 @@ details.accordion .content {
     color: #fff;
 }
 
+.spotify-embed-frame {
+    background: rgba(255, 255, 255, 0.08);
+    border: 0;
+    display: block;
+    margin: 1rem 0 1.2rem;
+    min-height: 352px;
+    width: 100%;
+}
+
 .spotify-panel .media-placeholder-grid span {
     background: rgba(255, 255, 255, 0.1);
     border-color: rgba(255, 255, 255, 0.2);
@@ -2618,6 +2627,11 @@ details.accordion .content {
     .carousel-dots button {
         flex: 0 0 auto;
         width: 18px;
+    }
+
+    .spotify-embed-frame {
+        height: 232px;
+        min-height: 232px;
     }
 
     .micro-route-step {
