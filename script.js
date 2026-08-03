@@ -74,6 +74,41 @@ const setupNavigation = () => {
     });
 };
 
+const setupActiveNavigation = () => {
+    const sectionLinks = qsa('.nav-links a[href^="#"], .mobile-bottom-nav a[href^="#"]');
+    if (!sectionLinks.length || !("IntersectionObserver" in window)) return;
+
+    const sections = sectionLinks
+        .map((link) => qs(link.getAttribute("href")))
+        .filter(Boolean);
+
+    if (!sections.length) return;
+
+    const setActive = (id) => {
+        sectionLinks.forEach((link) => {
+            const isActive = link.getAttribute("href") === `#${id}`;
+            link.classList.toggle("is-active", isActive);
+            if (isActive) {
+                link.setAttribute("aria-current", "page");
+            } else {
+                link.removeAttribute("aria-current");
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            const visible = entries
+                .filter((entry) => entry.isIntersecting)
+                .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+            if (visible?.target?.id) setActive(visible.target.id);
+        },
+        { rootMargin: "-35% 0px -55% 0px", threshold: [0.12, 0.3, 0.6] }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+};
+
 const setupReveal = () => {
     const elements = qsa(".reveal, .card, .project-card, .kpi-card");
 
@@ -359,6 +394,7 @@ const setupGalleryLightbox = () => {
 
 const init = () => {
     setupNavigation();
+    setupActiveNavigation();
     setupReveal();
     animateKpis();
     hydrateCvSummary();

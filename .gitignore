@@ -1,0 +1,9 @@
+ftp-commands.txt
+upload-fix.ps1
+upload-fix2.ps1
+backups/
+*.log
+.env
+.env.*
+deploy-package/
+dist-deploy/
