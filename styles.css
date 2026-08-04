@@ -2589,6 +2589,48 @@ details.accordion .content {
     width: 100%;
 }
 
+.chiflip-photo-rail {
+    background: transparent;
+}
+
+.chiflip-photo-rail .carousel-viewport {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+}
+
+.chiflip-photo-rail .carousel-track {
+    display: flex;
+    gap: 1rem;
+    padding: 0.3rem 0 1rem;
+    transform: none;
+    width: max-content;
+}
+
+.chiflip-photo-rail .carousel-slide {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: 0 16px 40px rgba(11, 18, 32, 0.08);
+    flex: 0 0 clamp(280px, 42vw, 560px);
+    min-width: clamp(280px, 42vw, 560px);
+    overflow: hidden;
+    scroll-snap-align: start;
+}
+
+.chiflip-photo-rail .carousel-slide img {
+    aspect-ratio: 4 / 3;
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;
+}
+
+.chiflip-photo-rail .carousel-controls {
+    display: none;
+}
+
 .chiflip-gallery-item {
     margin: 0;
     overflow: hidden;
