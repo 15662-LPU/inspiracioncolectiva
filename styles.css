@@ -2458,6 +2458,87 @@ details.accordion .content {
     color: var(--muted);
 }
 
+.chiflip-review-layout {
+    align-items: start;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: minmax(0, 0.72fr) minmax(0, 1fr);
+}
+
+.chiflip-review-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: 0 18px 44px rgba(11, 18, 32, 0.06);
+    display: grid;
+    gap: 1rem;
+    padding: clamp(1.4rem, 3vw, 2rem);
+}
+
+.chiflip-review-card p {
+    color: var(--ink);
+    font-size: 1.02rem;
+    line-height: 1.75;
+    margin: 0;
+}
+
+.chiflip-review-points {
+    display: grid;
+    gap: 0.8rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.chiflip-review-points div {
+    background: var(--surface-soft);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    padding: 0.9rem;
+}
+
+.chiflip-review-points strong {
+    color: var(--chiflip-warm);
+    display: block;
+    font-size: 0.82rem;
+    margin-bottom: 0.35rem;
+    text-transform: uppercase;
+}
+
+.chiflip-review-points span {
+    color: var(--muted);
+    display: block;
+    font-size: 0.94rem;
+    line-height: 1.55;
+}
+
+.chiflip-review-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 0.3rem;
+}
+
+.chiflip-review-tags span {
+    background: var(--chiflip-soft);
+    border: 1px solid rgba(154, 52, 18, 0.14);
+    border-radius: 999px;
+    color: var(--chiflip-warm);
+    font-size: 0.84rem;
+    font-weight: 900;
+    padding: 0.45rem 0.7rem;
+}
+
+.review-mail-link {
+    color: var(--chiflip-warm);
+    font-weight: 900;
+    overflow-wrap: anywhere;
+    text-decoration: none;
+}
+
+.review-mail-link:hover,
+.review-mail-link:focus {
+    text-decoration: underline;
+}
+
 .chiflip-formation-grid ul {
     margin: 0.8rem 0 0;
     padding-left: 1.1rem;
@@ -2633,6 +2714,7 @@ details.accordion .content {
     .cv-layout,
     .chiflip-entry-grid,
     .chiflip-hero-grid,
+    .chiflip-review-layout,
     .flagship-grid,
     .flagship-evidence,
     .flagship-memory-header,
@@ -2666,6 +2748,7 @@ details.accordion .content {
     .evidence-grid,
     .chiflip-purpose-grid,
     .chiflip-formation-grid,
+    .chiflip-review-points,
     .chiflip-timeline.memory-timeline {
         grid-template-columns: 1fr;
     }
