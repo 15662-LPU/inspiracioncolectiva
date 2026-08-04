@@ -2484,6 +2484,22 @@ details.accordion .content {
     margin: 0;
 }
 
+.chiflip-review-poster {
+    background: #fffaf3;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    margin: 0;
+    overflow: hidden;
+}
+
+.chiflip-review-poster img {
+    display: block;
+    height: auto;
+    object-fit: contain;
+    object-position: center center;
+    width: 100%;
+}
+
 .chiflip-review-points {
     display: grid;
     gap: 0.8rem;
