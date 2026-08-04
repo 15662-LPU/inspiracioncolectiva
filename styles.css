@@ -2563,7 +2563,7 @@ details.accordion .content {
 }
 
 .chiflip-gallery-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .chiflip-gallery-item {
@@ -2572,10 +2572,10 @@ details.accordion .content {
 }
 
 .chiflip-gallery-item img {
-    aspect-ratio: 16 / 10;
     display: block;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
+    object-position: center center;
     width: 100%;
 }
 
