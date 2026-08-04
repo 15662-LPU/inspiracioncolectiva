@@ -2415,6 +2415,7 @@ details.accordion .content {
 }
 
 .chiflip-hero-image {
+    background: #fffaf3;
     border: 1px solid rgba(255, 255, 255, 0.24);
     border-radius: var(--radius);
     box-shadow: 0 34px 86px rgba(0, 0, 0, 0.32);
@@ -2423,10 +2424,11 @@ details.accordion .content {
 }
 
 .chiflip-hero-image img {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 1584 / 1616;
     display: block;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    object-position: center center;
     width: 100%;
 }
 
