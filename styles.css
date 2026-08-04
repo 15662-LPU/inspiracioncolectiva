@@ -2566,6 +2566,29 @@ details.accordion .content {
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.chiflip-photo-carousel {
+    background: #fff;
+}
+
+.chiflip-photo-carousel .carousel-viewport {
+    background: #f8fafc;
+}
+
+.chiflip-photo-carousel .carousel-slide {
+    align-items: center;
+    background: #f8fafc;
+    display: flex;
+    justify-content: center;
+}
+
+.chiflip-photo-carousel .carousel-slide img {
+    aspect-ratio: auto;
+    height: min(72vh, 680px);
+    object-fit: contain;
+    object-position: center center;
+    width: 100%;
+}
+
 .chiflip-gallery-item {
     margin: 0;
     overflow: hidden;
