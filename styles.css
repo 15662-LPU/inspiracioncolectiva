@@ -2557,11 +2557,11 @@ details.accordion .content {
     text-decoration: underline;
 }
 
-.chiflip-comic-section {
+.chiflip-workshop-section {
     background: linear-gradient(135deg, #fff7ed 0%, #ffffff 52%, #fef3c7 100%);
 }
 
-.chiflip-comic-panel {
+.chiflip-workshop-panel {
     align-items: center;
     background: #fff;
     border: 1px solid rgba(154, 52, 18, 0.16);
@@ -2573,7 +2573,7 @@ details.accordion .content {
     padding: clamp(1.4rem, 4vw, 2.4rem);
 }
 
-.chiflip-comic-actions {
+.chiflip-workshop-actions {
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem;
@@ -2820,7 +2820,7 @@ details.accordion .content {
     .chiflip-entry-grid,
     .chiflip-hero-grid,
     .chiflip-review-layout,
-    .chiflip-comic-panel,
+    .chiflip-workshop-panel,
     .flagship-grid,
     .flagship-evidence,
     .flagship-memory-header,
@@ -2980,7 +2980,7 @@ details.accordion .content {
     }
 
     .hero-actions .btn,
-    .chiflip-comic-actions .btn,
+    .chiflip-workshop-actions .btn,
     .flagship-actions .btn,
     .contact-actions .btn,
     .micro-status-actions .btn,
