@@ -2557,6 +2557,28 @@ details.accordion .content {
     text-decoration: underline;
 }
 
+.chiflip-comic-section {
+    background: linear-gradient(135deg, #fff7ed 0%, #ffffff 52%, #fef3c7 100%);
+}
+
+.chiflip-comic-panel {
+    align-items: center;
+    background: #fff;
+    border: 1px solid rgba(154, 52, 18, 0.16);
+    border-radius: var(--radius);
+    box-shadow: 0 20px 60px rgba(154, 52, 18, 0.1);
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: minmax(0, 1fr) auto;
+    padding: clamp(1.4rem, 4vw, 2.4rem);
+}
+
+.chiflip-comic-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: flex-end;
+}
 .chiflip-formation-grid ul {
     margin: 0.8rem 0 0;
     padding-left: 1.1rem;
@@ -2798,6 +2820,7 @@ details.accordion .content {
     .chiflip-entry-grid,
     .chiflip-hero-grid,
     .chiflip-review-layout,
+    .chiflip-comic-panel,
     .flagship-grid,
     .flagship-evidence,
     .flagship-memory-header,
@@ -2957,6 +2980,7 @@ details.accordion .content {
     }
 
     .hero-actions .btn,
+    .chiflip-comic-actions .btn,
     .flagship-actions .btn,
     .contact-actions .btn,
     .micro-status-actions .btn,
